@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,3 +43,5 @@ Route::group(['prefix'=>'admin'], function()  {
         return 'admin dashboard';
     });
 });
+
+Route::get('home', [HomeController::class, 'index'])->name('home.index');
